@@ -24,7 +24,7 @@ jobs:
         run: |
           ls "${{ runner.tool_cache }}"
           cd "${{ runner.tool_cache }}"
-          tar -czf tool_cache.tar.gz *
+          tar -czf tool_cache.tar.gz ${{runner.tool_cache}}/*
       
       - name: Release
         uses: softprops/action-gh-release@v2
